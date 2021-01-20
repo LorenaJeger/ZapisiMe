@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #57296F;" xmlns="http://javafx.com/javafx/15.0.1
+" xmlns:fx="http://javafx.com/fxml/1
+" fx:controller="sample.Controller">
+    <children>
+        <VBox layoutX="14.0" layoutY="80.0" prefHeight="456.0" prefWidth="312.0" spacing="10.0">
+            <children>
+                <Label text="ID obaveze:" textFill="#fafafa">
+                    <font>
+                        <Font name="Californian FB Bold" size="21.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="id" />
+                <Label prefHeight="27.0" prefWidth="119.0" text="Obaveza:" textFill="#fafafa">
+                    <font>
+                        <Font name="Californian FB Bold" size="21.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="obaveza" />
+                <Label prefHeight="27.0" prefWidth="261.0" text="Datum izvršenja obaveze:" textFill="#fafafa">
+                    <font>
+                        <Font name="Californian FB Bold" size="21.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="datumObaveze" />
+                <Label prefHeight="27.0" prefWidth="309.0" text="Vrijeme izvršenja obaveze (ss:mm):" textFill="#fafafa">
+                    <font>
+                        <Font name="Californian FB Bold" size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="vrijemeObaveze" />
+                <Label prefHeight="27.0" prefWidth="140.0" text="Opis obaveze:" textFill="#fafafa">
+                    <font>
+                        <Font name="Californian FB Bold" size="21.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="opisObaveze" prefHeight="141.0" prefWidth="312.0" />
+            </children>
+        </VBox>
+        <Label layoutX="478.0" layoutY="14.0" text="ZapišiMe" textFill="#fafafa">
+            <font>
+                <Font name="Californian FB Bold" size="35.0" />
+            </font>
+        </Label>
+        <Button fx:id="upisiObavezu" layoutX="21.0" layoutY="550.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="102.0" text="Upiši">
+            <font>
+                <Font name="Californian FB Bold" size="16.0" />
+            </font>
+        </Button>
+        <Button fx:id="obrisiObavezu" layoutX="275.0" layoutY="550.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="102.0" text="Obriši">
+            <font>
+                <Font name="Californian FB Bold" size="16.0" />
+            </font>
+        </Button>
+        <Button fx:id="azurirajObavezu" layoutX="150.0" layoutY="550.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="105.0" text="Ažuriraj">
+            <font>
+                <Font name="Californian FB Bold" size="16.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="101.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../slike/olovka_slika.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="353.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../slike/smece_slika.png" />
+            </image>
+        </ImageView>
+        <TableView fx:id="tablicaObaveza" layoutX="353.0" layoutY="94.0" onMouseClicked="#handleMouseAction" prefHeight="439.0" prefWidth="732.0">
+            <columns>
+                <TableColumn fx:id="stupacID" prefWidth="45.5999755859375" text="ID" />
+                <TableColumn fx:id="stupacObaveza" prefWidth="198.4000244140625" text="Obaveza" />
+                <TableColumn fx:id="stupacDatum" prefWidth="120.0" text="Datum" />
+                <TableColumn fx:id="stupacVrijeme" prefWidth="111.199951171875" text="Vrijeme" />
+                <TableColumn fx:id="stupacOpisObaveze" prefWidth="275.2000732421875" text="Opis obaveze" />
+            </columns>
+        </TableView>
+        <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="230.0" layoutY="555.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../slike/azuriraj.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
